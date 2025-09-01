@@ -1,0 +1,10 @@
+streamlit
+passlib[bcrypt]
+sentence-transformers
+scikit-learn
+torch
+transformers
+pandas
+numpy
+PyPDF2
+PyMuPDF

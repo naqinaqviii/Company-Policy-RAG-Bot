@@ -9,7 +9,7 @@ from typing import List, Tuple
 
 import numpy as np
 import streamlit as st
-import bcrypt
+from passlib.hash import bcrypt
 
 # PDF/text handling
 import PyPDF2
@@ -107,13 +107,11 @@ def init_db():
 
 # ------------------ Auth Helpers ------------------
 def hash_password(password: str) -> str:
-    return bcrypt.hashpw(password.encode(), bcrypt.gensalt()).decode("utf-8")
+    return bcrypt.hash(password)
 
 def check_password(password: str, hashed: str) -> bool:
-    try:
-        return bcrypt.checkpw(password.encode(), hashed.encode("utf-8"))
-    except Exception:
-        return False
+    return bcrypt.verify(password, hashed)
+
 
 def create_user(name, email, password, department, is_admin=0):
     conn = get_conn()
