@@ -550,28 +550,42 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-import streamlit as st
-
 st.markdown(
     """
     <style>
-    /* Force background */
+    /* Main background with gradient */
     section.main {
         background: linear-gradient(135deg, #0F172A, #1E3A8A);
-        color: #F8FAFC;
+        color: #F8FAFC !important;
     }
+
     /* Sidebar */
-    .st-emotion-cache-6qob1r {
-        background-color: #1E293B !important;
+    .st-emotion-cache-6qob1r, .st-emotion-cache-1d391kg {
+        background: #1E293B !important;
     }
-    /* All text */
-    body, .st-emotion-cache-1v0mbdj, .stMarkdown {
+
+    /* Cards / containers */
+    .st-emotion-cache-16txtl3 {
+        background: #1E293B !important;
+        border-radius: 12px;
+        padding: 12px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+    }
+
+    /* Headings */
+    h1, h2, h3, h4, h5, h6 {
+        color: #60A5FA !important; /* lighter blue */
+    }
+
+    /* Text */
+    body, p, span, label {
         color: #F8FAFC !important;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
+
 
 # Example chat messages
 st.markdown(

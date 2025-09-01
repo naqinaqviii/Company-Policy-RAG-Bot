@@ -1,6 +1,6 @@
 [theme]
-primaryColor="#0A192F"             # Dark Navy Blue
-backgroundColor="#0F172A"          # Dark Background
-secondaryBackgroundColor="#1E293B" # Slightly lighter sections
-textColor="#E2E8F0"                # Light Gray Text
-font="sans serif"
+primaryColor = "#2563EB"           # Bright blue for buttons/links
+backgroundColor = "#0F172A"        # Deep navy background
+secondaryBackgroundColor = "#1E293B" 
+textColor = "#F8FAFC"              # Almost white text
+font = "sans serif"
